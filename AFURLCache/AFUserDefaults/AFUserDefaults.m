@@ -46,6 +46,9 @@ static AFUserDefaults *_afUserDefaults=nil;
     if (tempData != nil) {
         resultDict =[NSKeyedUnarchiver unarchiveObjectWithData:tempData];
     }
+    else{
+        return nil;
+    }
     //NSLog(@"resultDict=%@",resultDict);
     return [resultDict objectForKey:@"value"];
 }
